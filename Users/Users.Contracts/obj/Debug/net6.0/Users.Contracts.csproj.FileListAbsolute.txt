@@ -1,0 +1,12 @@
+C:\Frontend\users-management\Users\Users.Contracts\bin\Debug\net6.0\Users.Contracts.deps.json
+C:\Frontend\users-management\Users\Users.Contracts\bin\Debug\net6.0\Users.Contracts.dll
+C:\Frontend\users-management\Users\Users.Contracts\bin\Debug\net6.0\Users.Contracts.pdb
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.csproj.AssemblyReference.cache
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.AssemblyInfoInputs.cache
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.AssemblyInfo.cs
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.csproj.CoreCompileInputs.cache
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.dll
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\refint\Users.Contracts.dll
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\Users.Contracts.pdb
+C:\Frontend\users-management\Users\Users.Contracts\obj\Debug\net6.0\ref\Users.Contracts.dll
