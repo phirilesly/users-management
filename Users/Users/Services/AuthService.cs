@@ -29,7 +29,7 @@ namespace Users.Services
 
         public async Task<ServiceResponse<string>> Login(string email, string password)
         {
-            FilterDefinition<User> filter = Builders<User>.Filter.Eq(c => c.Email, email);
+            FilterDefinition<UserModel> filter = Builders<UserModel>.Filter.Eq(c => c.Email, email);
             var response = new ServiceResponse<string>();
             var user = (await _context.Users.FindAsync(filter)).FirstOrDefault();
             if (user == null)
@@ -50,7 +50,7 @@ namespace Users.Services
             return response;
         }
 
-        public async Task<ServiceResponse<int>> Register(User user, string password)
+        public async Task<ServiceResponse<int>> Register(UserModel user, string password)
         {
             if (await UserExists(user.Email))
             {
@@ -74,7 +74,7 @@ namespace Users.Services
 
         public async Task<bool> UserExists(string email)
         {
-            FilterDefinition<User> filter = Builders<User>.Filter.Eq(c => c.Email, email);
+            FilterDefinition<UserModel> filter = Builders<UserModel>.Filter.Eq(c => c.Email, email);
             var user = (await _context.Users.FindAsync(filter)).FirstOrDefault();
             if (user != null)
             {
@@ -103,7 +103,7 @@ namespace Users.Services
             }
         }
 
-        private string CreateToken(User user)
+        private string CreateToken(UserModel user)
         {
             List<Claim> claims = new List<Claim>
             {
@@ -129,7 +129,7 @@ namespace Users.Services
 
         public async Task<ServiceResponse<bool>> ChangePassword(int userId, string newPassword)
         {
-            FilterDefinition<User> filter = Builders<User>.Filter.Eq(c => c.UserData.UserId, userId);
+            FilterDefinition<UserModel> filter = Builders<UserModel>.Filter.Eq(c => c.UserData.UserId, userId);
 
             var user = (await _context.Users.FindAsync(filter)).FirstOrDefault();
             if (user == null)
@@ -151,9 +151,9 @@ namespace Users.Services
             return new ServiceResponse<bool> { Data = true, Message = "Password has been changed." };
         }
 
-        public async Task<User> GetUserByEmail(string email)
+        public async Task<UserModel> GetUserByEmail(string email)
         {
-            FilterDefinition<User> filter = Builders<User>.Filter.Eq(c => c.Email, email);
+            FilterDefinition<UserModel> filter = Builders<UserModel>.Filter.Eq(c => c.Email, email);
             return (await _context.Users.FindAsync(filter)).FirstOrDefault();
         }
     }

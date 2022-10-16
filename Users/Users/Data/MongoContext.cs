@@ -1,6 +1,8 @@
-﻿using MongoDB.Bson.Serialization.Conventions;
+﻿
+using MongoDB.Bson.Serialization.Conventions;
 using MongoDB.Driver;
 using Users.Contracts.Account;
+using Users.Contracts.Models;
 
 namespace Users.Data
 {
@@ -35,6 +37,10 @@ namespace Users.Data
             client = new MongoClient(connectionString);
             Database = client.GetDatabase(MongoUrl.Create(connectionString).DatabaseName);
         }
-        public IMongoCollection<User> Users => Database.GetCollection<User>("Users");
+        public IMongoCollection<UserModel> Users => Database.GetCollection<UserModel>("Users");
+
+        public IMongoCollection<User> UsersContext => Database.GetCollection<User>("Users");
+
+
     }
 }

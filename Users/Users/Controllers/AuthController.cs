@@ -22,7 +22,7 @@ namespace Users.Controllers
         public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegister request)
         {
             var response = await _authService.Register(
-                new User
+                new UserModel
                 {
                     Email = request.Email
                 },
